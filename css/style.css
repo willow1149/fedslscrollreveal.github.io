@@ -1,15 +1,8 @@
 body {
-  font-family: 'Open Sans',Arial,sans-serif; }
-
-.content {
-  text-align: center;
-  width: 1170px;
-  margin-left: auto;
-  margin-right: auto; }
+  font-family: 'Open Sans',Arial,sans-serif;
+  max-width: 1354px; }
 
 .header {
-  min-height: 600px;
-  max-width: 1354px;
   position: relative;
   overflow: hidden; }
   .header .back-head {
@@ -22,16 +15,79 @@ body {
   .header .front-head {
     height: 348px;
     width: 100%;
+    background-image: url(../images/front-head.png);
     background-position: bottom center;
     background-repeat: no-repeat;
     position: absolute;
     bottom: 0; }
 
-.content .image-grid .row {
-  width: 100%;
-  font-size: 0px; }
-  .content .image-grid .row .columns {
-    width: 33.33333%;
-    display: inline-block; }
+.first-section {
+  margin-top: 50px; }
+  .first-section .row {
+    width: 100%;
+    font-size: 0;
+    height: 400px; }
+    .first-section .row .column {
+      width: 33.33333%;
+      height: 400px;
+      display: inline-block;
+      position: relative;
+      transition: all 0.25s ease-in-out;
+      pointer: cursor;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%; }
+      .first-section .row .column .inner-text {
+        font-size: 15px;
+        position: absolute;
+        bottom: 0px;
+        height: 0;
+        width: 100%;
+        background: #34b544;
+        overflow: hidden;
+        transition: all 0.25s ease-in-out; }
+        .first-section .row .column .inner-text span {
+          position: absolute;
+          left: 0;
+          right: 0;
+          text-align: center;
+          line-height: 100px;
+          text-transform: uppercase; }
+      .first-section .row .column:hover {
+        background-size: 120%; }
+        .first-section .row .column:hover .inner-text {
+          height: 100px; }
+
+.sec-section {
+  margin-top: 25px; }
+  .sec-section .row {
+    width: 100%;
+    font-size: 0px;
+    height: 400px; }
+    .sec-section .row .column-one {
+      width: 50%;
+      display: inline-block;
+      height: 400px; }
+      .sec-section .row .column-one .bg-img {
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+    .sec-section .row .column-two {
+      font-size: 15px;
+      width: 50%;
+      height: 100%;
+      display: inline-block;
+      vertical-align: top; }
+
+.section {
+  margin-top: 25px; }
+  .section .row .column {
+    height: 400px;
+    max-width: 1354px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */

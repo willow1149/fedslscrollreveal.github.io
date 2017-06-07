@@ -3,19 +3,12 @@
 
 body{
 	font-family: 'Open Sans',Arial,sans-serif;
+	max-width: 1354px;
 }
 
-.content{
-    text-align: center;
-    width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 // parallax
 .header{
-    min-height: 600px;
-    max-width: 1354px;
     position: relative;
     overflow: hidden;
     .back-head{
@@ -35,7 +28,7 @@ body{
         height: 348px;
         width: 100%;
         background: {
-            //image: url(../images/front-head.png);
+            image: url(../images/front-head.png);
             position: bottom center;
             repeat: no-repeat;
         }
@@ -44,16 +37,98 @@ body{
     }
 }
 
-// grid
-.content{
-    .image-grid{
-        .row{
-            width: 100%;
-            font-size: 0px;
-            .columns{
-                width: (100%/3);
-                display: inline-block;
-            }
-        }
-    }
+//first-section
+.first-section{
+	margin-top: 50px;
+	.row{
+		width: 100%;
+		font-size: 0;
+		height: 400px;
+		.column{
+			width: (100%/3);
+			height: 400px;
+			display: inline-block;
+			position: relative;
+			transition: all 0.25s ease-in-out;
+			pointer: cursor;
+			background: {
+				position: center;
+				repeat: no-repeat;
+				size: 100%;
+			}
+			.inner-text{
+				font-size: 15px;
+				position: absolute;
+				bottom:0px;
+				height: 0;
+				width: 100%;
+				background: #34b544;
+				overflow: hidden;
+				transition: all 0.25s ease-in-out;
+				span{
+					position: absolute;
+					left: 0;
+					right: 0;
+					text-align: center;
+					line-height: 100px;
+					text-transform: uppercase;
+				}
+			}
+			&:hover{
+				background:{
+					size: 120%;
+				}
+				.inner-text{
+					height: 100px;
+				}
+			}
+		}
+	}
+}
+
+//second-section
+.sec-section{
+	margin-top: 25px;
+	.row{
+		width: 100%;
+		font-size: 0px;
+		height: 400px;
+		.column-one{
+			width: 50%;
+			display: inline-block;
+			height: 400px;
+			.bg-img{
+				height: 400px;
+				background: {
+					position: center;
+					repeat: no-repeat;
+					size: cover;
+				}
+			}
+		}
+		.column-two{
+			font-size: 15px;
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+}
+
+//section
+.section{
+	margin-top: 25px;
+	.row{
+		.column{
+			height: 400px;
+			max-width: 1354px;
+			background: {
+				repeat: no-repeat;
+				position: center;
+				attachment: fixed;
+				size: cover;
+			}
+		}
+	}
 }

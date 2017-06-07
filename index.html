@@ -14,48 +14,66 @@
 		<div class="middle-head"></div>
 		<div class="front-head"></div>
 	</header>
-	<section class="content">
-		<h1>Lorem Ipsum</h1>
-		<p class="para">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-		<div class="image-grid">
-			<div class="row">
-				<div class="columns">
-					<img src="images/grid-1.jpg" alt="">
-				</div>
-				<div class="columns">
-					<img src="images/grid-2.jpg" alt="">
-				</div>
-				<div class="columns">
-					<img src="images/grid-1.jpg" alt="">
+	<section class="first-section">
+		<div class="row">
+			<div class="column" style="background-image: url(images/grid-1.jpg);">
+				<div class="inner-text">
+					<span>lorem ipsum</span>
 				</div>
 			</div>
-			<div class="row">
-				<div class="columns">
-					<img src="images/grid-2.jpg" alt="">
-				</div>
-				<div class="columns">
-					<img src="images/grid-1.jpg" alt="">
-				</div>
-				<div class="columns">
-					<img src="images/grid-2.jpg" alt="">
+			<div class="column" style="background-image: url(images/grid-2.jpg);">
+				<div class="inner-text">
+					<span>lorem ipsum</span>
 				</div>
 			</div>
-			<div class="row">
-				<div class="columns">
-					<img src="images/grid-1.jpg" alt="">
-				</div>
-				<div class="columns">
-					<img src="images/grid-2.jpg" alt="">
-				</div>
-				<div class="columns">
-					<img src="images/grid-1.jpg" alt="">
+			<div class="column" style="background-image: url(images/grid-1.jpg);">
+				<div class="inner-text">
+					<span>lorem ipsum</span>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<section  class="sec-section">
+		<div class="row">
+			<div class="column-one">
+				<div class="bg-img" style="background-image: url(https://unsplash.it/800/800?random);"></div>
+			</div>
+			<div class="column-two">
+				<h3>Lorem Ipsum</h3>
+				<p>Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+			</div>
+		</div>
+		<div class="row">
+			
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="row">
+			<div class="column" style="background-image: url(https://unsplash.it/1354/400?random);"></div>
+		</div>
+	</section>
+
 	<div style='min-height:2000px;'></div>
-<script defer src="js/jquery.min.js"></script>
-<script defer src="js/scrollreveal.min.js"></script>
-<script defer src="js/functions.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/scrollreveal.min.js"></script>
+<script src="js/functions.min.js"></script>
+
+<script>
+	window.sr = ScrollReveal({ reset: true });
+	//first-section
+	sr.reveal('.first-section', { 
+		duration: 500
+	});
+	//sec-section -> bg-img
+	sr.reveal('.bg-img', { 
+		duration: 500,
+		origin: 'left',
+		opacity: 0,
+		easing: 'ease-in-out',
+		scale: 0.5,
+	});
+</script>
 </body>
 </html>
